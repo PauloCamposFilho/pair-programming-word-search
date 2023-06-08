@@ -1,6 +1,7 @@
 const transpose = require("./matrixTranspose");
 
 const wordSearch = (letters, word) => {
+  word = word.toUpperCase();
   const verticalJoin = transpose(letters).map(ls => ls.join(''));
   const horizontalJoin = letters.map(ls => ls.join(''));
   for (l of horizontalJoin) {
